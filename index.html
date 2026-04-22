@@ -1,11 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Mi Portafolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#mis-proyectos">Mis proyectos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre-mi">
+            <h2>Sobre mí</h2>
+            <img src="imagen.jpg" alt="Retrato de Matias" width="150" height="150">
+            <p>Hola, me llamo Matias y soy estudiante de sistemas</p>
+        </section>
+
+        <section id="mis-proyectos">
+            <h2>Mis proyectos</h2>
+            <article class="tarjeta-proyecto">
+                <h3>Sistema de tickets</h3>
+                <p>Un sistema de tickets para gestionar incidencias en una empresa.</p>
+                <button aria-label="Ver detalles del proyecto Sistema de Tickets">Leer más</button>
+            </article>
+            
+            <article class="tarjeta-proyecto">
+                <h3>E-Commerce</h3>
+                <p>Una tienda online para vender productos.</p>
+                <button aria-label="Ver detalles del proyecto E-Commerce">Leer más</button>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Mi Portafolio. Todos los derechos reservados.</p>
+    </footer>
 </body>
-</html>l
+</html>
