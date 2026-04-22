@@ -1,38 +1,57 @@
 /* Declaro variables para colores y fuentes*/
 :root{
-    --primary-color: #3b82f6;
+    --primary-color: #2563eb;
     --secondary-color: #2ecc71;
-    --background-color: #f5f5f5;
-    --text-color: #1f2937;
-    --base-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --background-color: #f1f5f9;
+    --white: #ffffff;
+    --text-color: #0f172a;
+    --base-font: 'Segoe UI', system-ui, sans-serif;
+    --radius: 12px;
+    --spacing-base: 1.5rem;
 }
 
-/* Reset global para todos los elementos */
+/* Reset global para todos los elementos, border-box  hace que el ancho total de la caja incluya el padding y el borde*/
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/*justify-content: space-between para separar el logo de los links*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: var(--spacing-base);
+}
+
 body {
     font-family: var(--base-font);
-    background-color: var(--background-color);
+    background-color: var(--white);
     color: var(--text-color);
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 /* Utilizamos flexbox para el diseño */
 .tarjeta-proyecto{
-  background: var(--background-color);
-  padding: 1.5rem;
-  border-radius: 8px;
+  background: var(--white);
+  padding: var(--spacing-base);
+  border-radius: var(--radius);
+  margin-bottom: var(--spacing-base);
+  border: 1px solid #e2e8f0;
   border-left: 5px solid var(--primary-color);
-  margin-bottom: 1rem;
   
   /* Flexbox para alinear contenido */
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--spacing-base);
 }
 
 .tarjeta-proyecto button{
@@ -48,8 +67,8 @@ body {
 .contenedor-proyectos{
   display: grid;
   list-style: none;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: var(--spacing-base); 
 }
 
 /* Estilos para pantallas medianas y grandes */
@@ -57,4 +76,8 @@ body {
   .contenedor-proyectos{
     grid-template-columns: repeat(2, 1fr);
   }
+}
+img{
+    display: block;
+    max-width: 100%;
 }
