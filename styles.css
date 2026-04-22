@@ -43,3 +43,18 @@ body {
   border: none;
   cursor: pointer; 
 }
+
+/* Estilo base para el contenedor de proyectos (mobile) */
+.contenedor-proyectos{
+  display: grid;
+  list-style: none;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* Estilos para pantallas medianas y grandes */
+@media (min-width: 768px) {
+  .contenedor-proyectos{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
